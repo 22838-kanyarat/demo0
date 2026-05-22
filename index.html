@@ -145,6 +145,31 @@
             color: var(--dark-gray);
         }
 
+        /* ตกแต่งสไตล์วิชาเรียนย่อย ๆ */
+        .subject-tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #fff;
+            border: 1px solid var(--light-pink);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--dark-gray);
+        }
+
+        .tag i {
+            color: var(--primary-pink);
+            font-size: 0.9rem;
+        }
+
         /* ตกแต่งส่วนท้ายกิ๊บเก๋ */
         .profile-footer {
             text-align: center;
@@ -191,6 +216,31 @@
                 <div class="info-content">
                     <span class="label">วันเกิด / Birthday</span>
                     <span class="value">10 กันยายน 2554</span>
+                </div>
+            </div>
+
+            <!-- เพื่อนสนิท -->
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">เพื่อนสนิท / Best Friend</span>
+                    <span class="value">คะตาง <i class="fa-solid fa-heart" style="color: var(--primary-pink); font-size: 0.9rem; margin-left: 4px;"></i></span>
+                </div>
+            </div>
+
+            <!-- วิชาที่ชอบ -->
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">วิชาที่ชอบ / Favorite Subjects</span>
+                    <div class="subject-tags">
+                        <span class="tag"><i class="fa-solid fa-laptop-code"></i> คอมพิวเตอร์</span>
+                        <span class="tag"><i class="fa-solid fa-flask"></i> วิทยาศาสตร์</span>
+                    </div>
                 </div>
             </div>
 
