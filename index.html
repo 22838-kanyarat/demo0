@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติของ น้องข้าวฟ่าง</title>
+    <!-- Google Fonts: สไตล์ฟอนต์น่ารักและทันสมัย -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Mitr:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome: ไอคอนตกแต่ง -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --light-pink: #fbc4d0;
+            --bg-pink: #fff0f3;
+            --dark-gray: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--bg-pink);
+            background-image: radial-gradient(#ffccd5 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--dark-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-container {
+            background: var(--white);
+            max-width: 500px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(255, 133, 162, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ส่วนหัว / แบนเนอร์ */
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-pink), var(--light-pink));
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .avatar-wrapper {
+            width: 130px;
+            height: 130px;
+            background: var(--white);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 4px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .avatar-wrapper i {
+            font-size: 65px;
+            color: var(--primary-pink);
+        }
+
+        .profile-header h1 {
+            font-family: 'Mitr', sans-serif;
+            color: var(--white);
+            font-size: 1.8rem;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        /* ส่วนเนื้อหาประวัติ */
+        .profile-body {
+            padding: 40px 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            background: #fffcfd;
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            border: 1px solid #ffe5ec;
+            transition: all 0.2s ease;
+        }
+
+        .info-item:hover {
+            background: #fff5f7;
+            border-color: var(--light-pink);
+            transform: scale(1.02);
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            background: var(--bg-pink);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .icon-box i {
+            font-size: 20px;
+            color: var(--primary-pink);
+        }
+
+        .info-content .label {
+            font-size: 0.85rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .info-content .value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        /* ตกแต่งส่วนท้ายกิ๊บเก๋ */
+        .profile-footer {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .heart-icon {
+            color: var(--primary-pink);
+            animation: heartbeat 1.5s infinite;
+            font-size: 1.2rem;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.2); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.2); }
+            80% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- ส่วนหัว -->
+        <div class="profile-header">
+            <div class="avatar-wrapper">
+                <!-- ไอคอนรูปเด็กผู้หญิงจาก Font Awesome -->
+                <i class="fa-solid fa-child-dress"></i>
+            </div>
+            <h1>ด.ญ. กันยารัตน์ หล่อธาน</h1>
+            <p>น้องข้าวฟ่าง <i class="fa-solid fa-sparkles" style="color: #ffe600;"></i></p>
+        </div>
+
+        <!-- รายละเอียดประวัติ -->
+        <div class="profile-body">
+            
+            <!-- วันเกิด -->
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">วันเกิด / Birthday</span>
+                    <span class="value">10 กันยายน 2554</span>
+                </div>
+            </div>
+
+            <!-- อาหารที่ชอบ -->
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">อาหารที่ชอบ / Favorite Food</span>
+                    <span class="value">ขนมจีน</span>
+                </div>
+            </div>
+
+            <!-- สีที่ชอบ -->
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">สีที่ชอบ / Favorite Color</span>
+                    <span class="value" style="color: var(--primary-pink);">สีชมพู (Pink)</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ส่วนท้าย -->
+        <div class="profile-footer">
+            <i class="fa-solid fa-heart heart-icon"></i>
+        </div>
+    </div>
+
+</body>
+</html>
