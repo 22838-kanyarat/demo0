@@ -15,15 +15,28 @@
         }
 
         body {
-        
             background-color: #f0f4f8;
-             <img src="https://image.dogilike.com/shareimg/contentimg/2019/pungpond/1-19/Caring/2/chihuahua-11.jpg" alt="รูปสัตว์น่ารัก" width="400">
             color: #334e68;
             display: flex;
+            flex-direction: column; /* เปลี่ยนเป็น column เพื่อให้รูปภาพอยู่ด้านบนการ์ด */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+        }
+
+        /* ตกแต่งส่วนรูปภาพด้านบน */
+        .top-image-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .top-image-container img {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            border-radius: 15px; /* เพิ่มความโค้งมนให้รูปภาพเข้ากับการ์ด */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* เพิ่มเงาให้นุ่มนวล */
         }
 
         /* Card Container optimized for view and A4 Print */
@@ -263,6 +276,9 @@
                 padding: 0;
                 display: block;
             }
+            .top-image-container {
+                display: none; /* ซ่อนรูปสุนัขตอนสั่งพิมพ์ A4 เพื่อความเรียบร้อย */
+            }
             .profile-card {
                 box-shadow: none;
                 border: 1px solid #cbd5e0;
@@ -292,8 +308,11 @@
 </head>
 <body>
 
+    <div class="top-image-container">
+        <img src="https://image.dogilike.com/shareimg/contentimg/2019/pungpond/1-19/Caring/2/chihuahua-11.jpg" alt="รูปสัตว์น่ารัก">
+    </div>
+
     <div class="profile-card">
-        <!-- Header Section -->
         <div class="header">
             <div class="avatar-container">
                 <div class="avatar-placeholder">ขฟ</div>
@@ -308,10 +327,8 @@
             </div>
         </div>
 
-        <!-- Main Content Section -->
         <div class="content">
             
-            <!-- Left Column: Personal Data -->
             <div>
                 <h2 class="section-title">ข้อมูลทั่วไป</h2>
                 <div class="info-grid">
@@ -342,7 +359,6 @@
                 </div>
             </div>
 
-            <!-- Right Column: School & Lifestyle -->
             <div>
                 <h2 class="section-title">การเรียน & กิจกรรม</h2>
                 <div class="list-item">
@@ -367,7 +383,6 @@
                 </div>
             </div>
 
-            <!-- Left Column Bottom: Preferences -->
             <div>
                 <h2 class="section-title">ความชอบส่วนตัว</h2>
                 <div class="list-item">
@@ -392,7 +407,6 @@
                 </div>
             </div>
 
-            <!-- Right Column Bottom: Skills & Hobbies -->
             <div>
                 <h2 class="section-title">ทักษะ & งานอดิเรก</h2>
                 <div class="list-label" style="margin-bottom: 5px;">ทักษะความสามารถ</div>
@@ -406,7 +420,6 @@
                 </div>
             </div>
 
-            <!-- Full Width Bottom: Motto -->
             <div class="motto-box">
                 <div class="motto-title">คติประจำใจ</div>
                 <div class="motto-text">- ไม่มี -</div>
